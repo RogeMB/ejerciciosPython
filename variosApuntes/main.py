@@ -1,5 +1,5 @@
 # genera una lista de los nº de los quince primeros numeros que el nº elevado al cubo sea impares.
-
+from functools import reduce
 
 lista = [numero for numero in
          [numero ** 3 for numero in range(0, 15)]
@@ -55,3 +55,62 @@ a = ['PSP', 'AD', 'DI', 'PDMD']
 n = [3.4, 2.5, 7.4, 6.6]
 
 print(list(zip(a, n)))
+
+resultado2 = reduce(lambda x, y: x+y, range(1, 101))
+
+
+array = ["Hola", "buenos", "días"]
+print(reduce(lambda na, ma: na + " " + ma, array))
+
+
+
+# d es un diccionario
+
+dicci = {}
+dicci["PM"] = 6.5
+dicci["AD"] = 5.4
+
+
+
+# contar las distintas ocurrencias de las letras
+
+
+def count(characters):
+    return reduce(reducer, map(lambda char: dict([[char, 1]]), characters))
+
+
+def reducer(i, j):
+    for k in j: i[k] = i.get(k, 0) + j.get(k, 0)
+    return i
+
+
+print
+count('testing yeah it works')
+
+
+
+
+
+
+for key in dicci.keys():
+    print(key + " " + str(dicci[key]))
+
+for k, v in dicci.item():
+    print(k + " " + str(v))
+
+print(reduce(lambda x, y: x+y, dicci.values())/len(dicci))
+
+# realizar copias. Comprobar que una se hace copia nueva y otra la copia encima
+
+dicci1 = {'a': 1, 'b': 2}
+dicci2 = {'c': 3, 'd': 4}
+
+
+d_copy = dicci1
+del dicci1['a']
+print(d_copy)
+
+
+d2_copy = dict(dicci2)
+del dicci2['c']
+print(d2_copy)
