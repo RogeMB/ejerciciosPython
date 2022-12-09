@@ -42,16 +42,14 @@ print(l)
 multiplos_de_5 = list(filter(lambda x: x % 5 == 0, numeros))
 print(multiplos_de_5)
 
-
-print(list(map(lambda li : li.capitalize(), languages)))
+print(list(map(lambda li: li.capitalize(), languages)))
 
 a = [1, 2, 3, 4, 5]
-b = [6, 7, 8, 9, 10, 11] #imprime hasta la lista de menor número de elementos
+b = [6, 7, 8, 9, 10, 11]  # imprime hasta la lista de menor número de elementos
 
-print(list( map(lambda x,y : x*y, a,b) ))
+print(list(map(lambda x, y: x * y, a, b)))
 
-
-#zip es como flatMap en Java. Devuelve un iterable
+# zip es como flatMap en Java. Devuelve un iterable
 
 a = ['PSP', 'AD', 'DI', 'PDMD']
 n = [3.4, 2.5, 7.4, 6.6]
