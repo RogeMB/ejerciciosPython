@@ -56,20 +56,16 @@ n = [3.4, 2.5, 7.4, 6.6]
 
 print(list(zip(a, n)))
 
-resultado2 = reduce(lambda x, y: x+y, range(1, 101))
-
+resultado2 = reduce(lambda x, y: x + y, range(1, 101))
 
 array = ["Hola", "buenos", "días"]
 print(reduce(lambda na, ma: na + " " + ma, array))
-
-
 
 # d es un diccionario
 
 dicci = {}
 dicci["PM"] = 6.5
 dicci["AD"] = 5.4
-
 
 
 # contar las distintas ocurrencias de las letras
@@ -84,32 +80,25 @@ def reducer(i, j):
     return i
 
 
-print
-count('testing yeah it works')
-
-
-
-
+print(count('testing yeah it works'))
 
 
 for key in dicci.keys():
     print(key + " " + str(dicci[key]))
 
-for k, v in dicci.item():
+for k, v in dicci.items():
     print(k + " " + str(v))
 
-print(reduce(lambda x, y: x+y, dicci.values())/len(dicci))
+print(reduce(lambda x, y: x + y, dicci.values()) / len(dicci))
 
-# realizar copias. Comprobar que una se hace copia nueva y otra la copia encima
+# Realizar copias. Comprobar que una se hace copia nueva y otra la copia encima
 
 dicci1 = {'a': 1, 'b': 2}
 dicci2 = {'c': 3, 'd': 4}
 
-
 d_copy = dicci1
 del dicci1['a']
 print(d_copy)
-
 
 d2_copy = dict(dicci2)
 del dicci2['c']

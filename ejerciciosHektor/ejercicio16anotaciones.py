@@ -35,7 +35,7 @@ grupo_dos = {'Hector', 'Juan', 'Mario'}
 print('Hector' not in grupo_dos)
 
 cadena = "Al pan pan y al vino vino"
-print(set(cadena)) # nos transforma la cadena en un conjunto sin caracteres repetidos y lo desordena
+print(set(cadena))  # nos transforma la cadena en un conjunto sin caracteres repetidos y lo desordena
 
 
 # Ejercicio:
@@ -47,7 +47,6 @@ lista2 = ["Ana", "Ramón", "Marta", "Eric", "David"]
 
 for i in lista2:
     grupo.add(i)
-
 
 print(grupo)
 
